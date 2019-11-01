@@ -5,12 +5,12 @@ const uglify      = require('gulp-uglify');
 const livereload  = require('gulp-livereload');
 
 let css = {
-  source: 'src/stylesheets',
-  target: 'public/stylesheets'
+  source: 'src/css',
+  target: 'public/css'
 };
 let js = {
-  source: 'src/javascripts',
-  target: 'public/javascripts'
+  source: 'src/js',
+  target: 'public/js'
 };
 
 gulp.task('css', function () {
