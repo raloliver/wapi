@@ -5,6 +5,11 @@
 
 <article id="content" class="content">
   <h1>{{title}}</h1>
-</article><!-- #content -->
+  <ul>
+    {% for book in books %}
+    <li>{{book.name}}</li>
+    {% endfor %}
+  </ul>
+</article>
 
 {% endblock %}

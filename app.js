@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express');
 const path = require('path');
-const nunjucks = require('nunjucks');
+const swig = require('swig');
 const debug = require('debug')('library:app');
 const app = express();
 
@@ -11,11 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname, 'views'));
 
-nunjucks.configure('views', {
-  autoescape: true,
-  express: app,
-  tags: ''
-});
+app.engine('html', swig.renderFile);
 
 // routes
 app.use('/', require('./routes'));

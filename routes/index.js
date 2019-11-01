@@ -4,9 +4,9 @@ const router = express.Router();
 router.get('/', function (request, response) {
   response.render('index', { title: 'Library API' });
 });
-router.get('/books', function (request, response) {
+router.get('/book', function (request, response) {
   response.render('book', {
-    title: 'Books page', films: [
+    title: 'Books page', books: [
       { name: 'Livro 1' },
       { name: 'Livro 2' },
       { name: 'Livro 3' },
